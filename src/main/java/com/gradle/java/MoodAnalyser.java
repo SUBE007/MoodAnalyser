@@ -9,13 +9,15 @@ public class MoodAnalyser {
 
     }
 
-    public static String analyseMood()  {
+    public static String analyseMood() throws MoodAnalyserException {
         try {
-            if (message.equals("sad"))
+            if (message.length()==0)
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY,"EnteredEmptyException");
+            else if (message.equals("sad"))
                 return "sad";
         }
         catch (NullPointerException e){
-            return "Happy";
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL,"EnteredNullException");
         }
         return "happy";
     }
