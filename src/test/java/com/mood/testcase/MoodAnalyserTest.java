@@ -3,6 +3,7 @@ package com.mood.testcase;
 
 import com.gradle.java.MoodAnalyser;
 import com.gradle.java.MoodAnalyserException;
+import com.gradle.java.MoodAnalyserFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -70,6 +71,30 @@ public class MoodAnalyserTest {
         } catch (MoodAnalyserException e) {
             e.printStackTrace();
         }
+    }
+    @Test
+    public void givenWrongConstructorName_WithDefaultConstructor_ShouldReturnNoSuchMethodException(){
+        try{
+            Object myObject= MoodAnalyserFactory.createMoodAnalyserObject();
+            Assert.assertEquals("MoodConstructor",myObject);
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void givenWrongConstructorName_ArgumentConstructor_ShouldReturnNoClassException(){
+        try{
+            Object myObject= MoodAnalyserFactory.createMoodAnalyserObject("MoodAnalysers");
+            Assert.assertEquals("MoodAnalysers",myObject);
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public void givenObject_WhenEqual_ReturnTestPasses(){
+        MoodAnalyser mood=new MoodAnalyser("Object1");
+        boolean result=mood.equals("Object1");
+        Assert.assertEquals(true,result);
     }
 
 }

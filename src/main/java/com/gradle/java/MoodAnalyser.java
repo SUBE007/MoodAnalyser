@@ -21,4 +21,11 @@ public class MoodAnalyser {
         }
         return "happy";
     }
+
+    public  boolean equals(Object another){
+        if (this.message.equals(another))//  if (this.message.equals(((MoodAnalyser)another).message))
+            return true;
+        else
+            return false;
+    }
 }
