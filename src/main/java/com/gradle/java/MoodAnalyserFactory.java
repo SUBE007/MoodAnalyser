@@ -43,4 +43,26 @@ public class MoodAnalyserFactory {
         }
 
     }
+
+    public static Constructor<?>[] getConstructor(Class<?> ... param) throws MoodAnalyserException {
+        try {
+            Class<?> moodAnalyserClass=Class.forName("com.gradle.java.MoodAnalyser");
+            return moodAnalyserClass.getConstructors();
+        } catch (ClassNotFoundException e){
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_CLASS, "NO_SUCH_CLASS_EXCEPTION");
+        }
+    }
+
+    public static Object createMoodAnalyser(Constructor<?> constructor,Object ...message) throws MoodAnalyserException {
+        try{
+            return constructor.newInstance(message);
+        } catch (IllegalAccessException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_ACCESS, "ILLEGAL_ACCESS_EXCEPTION");
+        } catch (InstantiationException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.OBJECT_CREATION_ISSUE, "OBJECT_CREATION_EXCEPTION");
+        } catch (InvocationTargetException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.METHOD_INVOCATION_ISSUE, "METHOD_INVOCATION_EXCEPTION");
+        }
+    }
+
 }
