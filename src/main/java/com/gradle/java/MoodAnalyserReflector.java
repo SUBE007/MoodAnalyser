@@ -1,6 +1,7 @@
 package com.gradle.java;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 public class MoodAnalyserReflector {
@@ -65,11 +66,29 @@ public class MoodAnalyserReflector {
         }
     }
 
-    public static Object invokeMethod(Object myobj, String analyseMood) {
-        if (myobj.equals(analyseMood))
-            return "happy";
-        return "sad";
+    public static Object invokeMethod(Object moodAnalyseObject, String analyseMood) throws MoodAnalyserException {
+        try {
+            return moodAnalyseObject.getClass().getMethod(analyseMood).invoke(moodAnalyseObject);
+        }catch (NoSuchMethodException e){
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_METHOD,"No_SUCH_METHOD_EXCEPTION");
+        } catch (IllegalAccessException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_ACCESS, "NO_ACCESS");
+        } catch (InvocationTargetException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.METHOD_INVOCATION_ISSUE, "METHOD_INVOCATION_EXCEPTION");
+
+        }
 
     }
 
+    public static void setFieldValue(Object obj, String fieldName, String fieldValue) throws MoodAnalyserException {
+        try {
+            Field field = obj.getClass().getDeclaredField(fieldName);
+            field.setAccessible(true);
+            field.set(obj, fieldValue);
+        } catch (NoSuchFieldException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_SUCH_FIELD, "NO_SUCH_FIELD");
+        } catch (IllegalAccessException e) {
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NO_ACCESS, "NO_ACCESS");
+        }
+    }
 }

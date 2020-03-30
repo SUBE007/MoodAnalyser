@@ -125,4 +125,37 @@ public class MoodAnalyserTest {
         }
     }
 
+    @Test
+    public void givenHappyMessage_WithReflector_ShouldReturnHappy(){
+        try{
+            Object myObject= MoodAnalyserReflector.createMoodAnalyserObject(" ");
+            MoodAnalyserReflector.setFieldValue(myObject,"message","I am in haapy mood");
+            Object mood= MoodAnalyserReflector.invokeMethod(myObject,"analyseMood");
+            Assert.assertEquals("happy",mood);
+        } catch (MoodAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenMoodAnalyserMessage_WithReflector_ShouldReturnNoSuchFieldException(){
+        try{
+            Object myObject= MoodAnalyserReflector.createMoodAnalyserObject("happy");
+            MoodAnalyserReflector.setFieldValue(myObject,"message","I am in haapy mood");
+            //Object mood= MoodAnalyserReflector.invokeMethod(myObject,"analyseMood");
+            //Assert.assertEquals("happy",mood);
+        } catch (MoodAnalyserException e) {
+            Assert.assertEquals("NO_SUCH_FIELD",e.getMessage());
+        }
+    }
+
+    @Test
+    public void givenMoodAnalyserMessage_WithReflector_ShouldReturnNoAccessException(){
+        try{
+            Object myObject= MoodAnalyserReflector.createMoodAnalyserObject("happy");
+            MoodAnalyserReflector.setFieldValue(myObject,"message","I am in sad mood");
+         } catch (MoodAnalyserException e) {
+            Assert.assertEquals(" NO_ACCESS",e.getMessage());
+        }
+    }
 }

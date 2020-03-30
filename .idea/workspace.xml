@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbee1357-dcbc-41b9-869f-8285097dc021" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gradle/java/MoodAnalyserReflector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gradle/java/MoodAnalyserReflector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mood/testcase/MoodAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mood/testcase/MoodAnalyserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
       <recent name="com.gradle.java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoAccessException">
     <configuration name="MoodAnalyserTest.givenHappyMessage_WhenImproperMethod_ShouldNoSuchMethodException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -62,8 +64,92 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="MoodAnalyserTest.givenHappyMessage_WithDefaultConstructor_ShouldReturnHappy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.mood.testcase.MoodAnalyserTest.givenHappyMessage_WithDefaultConstructor_ShouldReturnHappy&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MoodAnalyserTest.givenHappyMessage_WithReflector_ShouldReturnHappy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.mood.testcase.MoodAnalyserTest.givenHappyMessage_WithReflector_ShouldReturnHappy&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoAccessException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.mood.testcase.MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoAccessException&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoSuchFieldException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.mood.testcase.MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoSuchFieldException&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoAccessException" />
+        <item itemvalue="Gradle.MoodAnalyserTest.givenMoodAnalyserMessage_WithReflector_ShouldReturnNoSuchFieldException" />
+        <item itemvalue="Gradle.MoodAnalyserTest.givenHappyMessage_WithReflector_ShouldReturnHappy" />
+        <item itemvalue="Gradle.MoodAnalyserTest.givenHappyMessage_WithDefaultConstructor_ShouldReturnHappy" />
         <item itemvalue="Gradle.MoodAnalyserTest.givenHappyMessage_WhenImproperMethod_ShouldNoSuchMethodException" />
       </list>
     </recent_temporary>
@@ -82,21 +168,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1294" height="275" key="GridCell.Tab.0.bottom" timestamp="1585510633148">
+    <state width="1294" height="49" key="GridCell.Tab.0.bottom" timestamp="1585559274034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1294" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585510633148" />
-    <state width="1294" height="275" key="GridCell.Tab.0.center" timestamp="1585510633148">
+    <state width="1294" height="49" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585559274034" />
+    <state width="1294" height="49" key="GridCell.Tab.0.center" timestamp="1585559274034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1294" height="275" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585510633148" />
-    <state width="1294" height="275" key="GridCell.Tab.0.left" timestamp="1585510633148">
+    <state width="1294" height="49" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585559274034" />
+    <state width="1294" height="49" key="GridCell.Tab.0.left" timestamp="1585559274034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1294" height="275" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585510633148" />
-    <state width="1294" height="275" key="GridCell.Tab.0.right" timestamp="1585510633148">
+    <state width="1294" height="49" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585559274034" />
+    <state width="1294" height="49" key="GridCell.Tab.0.right" timestamp="1585559274034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1294" height="275" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585510633148" />
+    <state width="1294" height="49" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585559274034" />
   </component>
 </project>
